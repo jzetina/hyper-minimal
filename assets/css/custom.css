@@ -1,0 +1,241 @@
+/********************************
+
+Author: Jorge Zetina
+Version: 1.0
+Domain: jorgezetina.com
+Contact: jorgezetina at gmail
+
+********************************/
+
+/****** I N D E X ******/
+
+/* proveemos una font para toda la página */
+body {
+	font-family: "Arial Narrow", "Arial", sans-serif;
+}
+
+/* representa el alto total del dispositivo desde donde se ve */
+body, html {
+	height: 100vh;
+	width: 100vw;
+	margin:0;
+	padding: 0;
+}
+
+/* ancho y alto del header, también se le aplica un borde bajo */
+header {
+	width: 100%;
+	height: 7vh;
+	border-bottom: 1px solid black;
+}
+
+/* logo cuervo */
+.logo {
+	height: 38px;
+	width: 38px;
+}
+
+/* nombre bajo el logo */
+.logo-text {
+	font-weight: bold;
+}
+
+/* quita los márgenes de la imagen y de las filas que tienen por defecto en bootstrap */
+.logo-text, .row, .footer-child>p {
+	margin: 0px !important; 
+}
+
+/* ancho total de las secciones */
+header, main, footer {
+	width: 100%;
+}
+
+/* se le aplica un borde a la sección resume cuando está arriba del breakpoint de 768px */
+.resume-section {
+	border-right: 1px solid black;
+}
+
+/* se le aplica un borde a la sección blog y se añaden clases para centrar verticalmente */
+.blog-section {
+	border-top: 1px solid black;
+	display: table;
+	width: 100%;
+}
+
+/* se añaden clases para centrar verticalmente y hacer la sección a la mitad del ancho total */
+.resume-section, .project-section, .work-section, .education-section, .tech-section {
+	display: table;
+	width: 50%;
+}
+
+/* se les da un alto igual a cada sección y se aumenta el tamaño de la fuente */
+.resume-section, .project-section, .blog-section {
+	height: 43vh;
+	font-size: 20px;
+}
+
+/* se les da un alto igual a cada sección y se aumenta el tamaño de la fuente */
+.work-section, .education-section, .tech-section {
+	height: 39.5vh;
+	font-size: 20px;
+}
+
+/* se les da un alto igual a cada sección y se aumenta el tamaño de la fuente */
+.geek-section, .crown-section, .pshma-section {
+	display: table;
+	height: 79vh;
+	width: 33.33%;
+	font-size: 20px;
+}
+
+/* se agregan clases para centrar verticalmente */
+#resume-child, #project-child, #blog-child, .footer-child, #work-child, #education-child, #tech-child, #title-child, #nav-child, #geek-child, #crown-child, #pshma-child {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* ancho y alto del footer, también se le añade un borde y un color de fondo. Se agregan clases para centrar verticalmente */
+.footer {
+	width: 100%;
+	height: 7vh;
+	border-top: 1px solid black;
+	background-color: #b4b4b4;
+	display: table;
+}
+
+/* los links en estado normal, al pasar el mouse o al visitarlos permanencen en color negro */
+a, a:hover, a:visited {
+	color: black;
+}
+
+/****** R E S U M E ******/
+
+/* añade clases para alinear verticalmente y especifica el ancho y alto */
+.title-section {
+	display: table;
+	width: 100%;
+	height: 7vh;
+}
+
+/* especifica tamaño de la fuente y añade padding a la izquierda del texto */
+.title-text {
+	font-size: 20px;
+	padding-left: 27px;
+	padding-right: 27px;
+}
+
+/* añade los bordes a las secciones */
+.work-section, .tech-section {
+	border-right: 1px solid black;
+}
+
+/* añade los bordes a las secciones */
+.work-section, .education-section, .title-section {
+	border-bottom: 1px solid black;
+}
+
+/* especifica tamaño de la fuente */
+.normal-font {
+	font-size: 17px;
+}
+
+
+/* margenes para esta clase */
+.title-margin {
+	margin: 40px 27px 10px 27px;
+}
+
+
+/* margenes para esta clase */
+.body-margin {
+	margin: 0px 20px 10px 27px;
+}
+
+
+/****** P R O J E C T S ******/
+
+/* agrega el borde derecho a las secciones */
+#geek-child, #crown-child {
+	border-right: 1px solid black;
+}
+
+/* centra el texto de las secciones */
+#geek-child, #crown-child, #pshma-child {
+	text-align:center;
+}
+
+/* agrega la propiedad table a la sección para poder centrar verticalmente los hijos,
+   además le da la altura deseada a la sección */
+.geek-project-section {
+	display: table;
+	height: 79vh;
+	width: 100%;
+}
+
+/* agrega las clases necesarios a los hijos para poder centrar verticalmente */
+#geek-project-child {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* remueve el padding y el margen del logo */
+#composed-logo {
+	padding: 0px;
+	margin: 0px;
+}
+
+/***** M E D I A   Q U E R Y ******/
+
+@media (max-width: 768px) {
+	/* aumento el alto del footer y la sección de título */
+	.footer, .title-section {
+		height: 8vh;
+	}
+
+	/* aumenta el alto del header */
+	header {
+		height: 10vh;
+	}
+	
+	/* se le agrega un borde a la sección project */
+	.project-section {
+		border-top: 1px solid black;
+	}
+
+	/* se divide el alto de las tres secciones en partes iguales */
+	.resume-section, .project-section, .blog-section, .work-section, .education-section, .tech-section {
+		height:27.34vh;
+		width: 100vw;
+		border-right: none;
+	}
+
+	/* se divide el alto de las tres secciones en partes iguales */
+	.geek-section, .crown-section, .pshma-section {
+		height: 24.33vh;
+		width: 100vw;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	/* remueve el borde derecho al estar en móvil y agrega el borde inferior */
+	#geek-child, #crown-child {
+		border-right: none;
+		border-bottom: 1px solid black;
+	}
+
+	/* alinea el texto al centro en móviles */
+	.title-text {
+		text-align: center;
+	}
+
+	/* aumenta el alto de la sección de proyectos */
+	.geek-project-section {
+		height: 73vh;
+	}
+
+	/* margenes para esta clase */
+	.title-margin {
+		margin: 10px 27px;
+	}
+}
